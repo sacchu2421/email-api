@@ -1,7 +1,6 @@
 package com.notification.email.api.service;
 
 import com.notification.email.api.config.EmailProperties;
-import com.notification.email.api.model.EmailObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -10,15 +9,12 @@ import reactor.core.publisher.Mono;
 
 @Service
 public class EmailService {
-    private final JavaMailSender javaMailSender;
     @Autowired
-    public EmailService(JavaMailSender javaMailSender) {
-        this.javaMailSender = javaMailSender;
-    }
+    JavaMailSender javaMailSender;
     @Autowired
     EmailProperties emailProperties;
 
-    public Mono<String> sendEmail(EmailObject emailObject) {
+    public Mono<String> sendEmail() {
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         simpleMailMessage.setTo(emailProperties.getEmailTo());
         simpleMailMessage.setCc(emailProperties.getEmailCC());
