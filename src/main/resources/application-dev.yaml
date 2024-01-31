@@ -1,0 +1,30 @@
+# Email Configuration
+
+spring:
+  mail:
+    host:
+    port:
+    username:
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+        starttls:
+          enable: true
+
+#
+#  spring.mail.host=your-mail-server-host
+#  spring.mail.port=your-mail-server-port
+#  spring.mail.username=your-username
+#  spring.mail.password=your-password
+#  spring.mail.properties.mail.smtp.auth=true
+#  spring.mail.properties.mail.smtp.starttls.enable=true
+#
+
+
+email:
+  to: sachinkapkoti1234@gmail.com
+  cc: sachinkapkoti6789@gmail.com
+  subject: Test mail
+  body:  "Hello Sachin, this is a test mail"
