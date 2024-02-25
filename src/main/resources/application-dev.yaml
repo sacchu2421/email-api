@@ -1,18 +1,21 @@
 spring:
   mail:
     host: smtp.gmail.com
-    port: 465
+    port: 587
     username: sachinkapkoti1234@gmail.com
-    password: Sacchu@242117
+    password: zqepqyadjygpmmjb
+    protocol: smtp
     properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
+      "mail.transport.protocol": smtp
+      "mail.smtp.auth": true
+      "mail.smtp.starttls.enable": true
+
 
 email:
-  to: sachinkapkoti6789@gmail.com
-  cc: sachinkapkoti6789@gmail.com
+  to: advaitpro@gmail.com
+  cc: sachinkapkoti1234@gmail.com
   subject: Test mail
-  body:  "Hello Sachin, this is a test mail"
+  body:  "Hello Advait, this is a test mail"
+
+server:
+  port: 8081
